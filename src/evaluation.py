@@ -1,11 +1,14 @@
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score, confusion_matrix, roc_curve
-import statsmodels.api as sm
+# import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
 def evaluate_model(model, X, y):
-    X = sm.add_constant(X)
-    y_pred_prob = model.predict(X)
-    y_pred = (y_pred_prob > 0.5).astype(int)
+    # X = sm.add_constant(X)
+    # y_pred_prob = model.predict(X)
+    # y_pred = (y_pred_prob > 0.5).astype(int)
+
+    y_pred = model.predict(X)
+    y_pred_prob = model.predict_proba(X)[:, 1]
 
     metrics = {
         "accuracy": accuracy_score(y, y_pred),
