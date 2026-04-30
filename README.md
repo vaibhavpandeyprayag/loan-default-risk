@@ -1,7 +1,7 @@
-# Loan Default Risk - Statistical Study
+# Credit Default Risk - Statistical Study
 
 ## Overview
-This project analyzes loan default risk using the German Credit Dataset. The objective is to statistically model the probability of default using logistic regression and interpret feature significance.
+This project analyzes credit default risk using the German Credit Dataset. The objective is to statistically model the probability of default using logistic regression and interpret feature significance.
 
 ## Tech Stack
 - NumPy
@@ -11,13 +11,13 @@ This project analyzes loan default risk using the German Credit Dataset. The obj
 - matplotlib
 
 ## Problem Statement
-Predict whether a customer is likely to default on a loan using structured financial and demographic data.
+Predict whether a customer is likely to default on a credit using structured financial and demographic data.
 
 ## Dataset
 German Credit Dataset
 - Target: Credit Risk (Good / Bad)
-- 'Bad' is treated as loan default
-- Link: https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk
+- 1 - Good, 2 - Bad
+- Link: https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data
 
 ## Project Pipeline
 1. Data Loading
@@ -33,7 +33,7 @@ conda activate credit-risk
 python main.py
 ```
 
-## Performance Comparison Table
+<!-- ## Performance Comparison Table
 
 
 | Metric                | Accuracy            | Precision     | Recall        | ROC-AUC      |
@@ -45,9 +45,9 @@ python main.py
 
 - **Logistic Regression:**
     - Better at identifying default cases (higher recall)
-    - Safer choice for financial institutions to minimize bad loans
+    - Safer choice for financial institutions to minimize bad credits
 
 - **Decision Tree:**
     - Higher Precision but lower Recall
     - May miss some default cases, but when it predicts default, it's more confident
-
+ -->
